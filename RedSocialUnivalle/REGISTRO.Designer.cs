@@ -60,10 +60,15 @@
             this.tUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tUsuarioTableAdapter = new RedSocialUnivalle.RedSocialUnivalleDataSet1TableAdapters.TUsuarioTableAdapter();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnCerrar = new RJCodeAdvance.RJControls.RJButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.iconCerrar = new FontAwesome.Sharp.IconButton();
+            this.iconMinimizar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.PB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redSocialUnivalleDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tUsuarioBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TBNombres
@@ -119,6 +124,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(100, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
@@ -128,6 +134,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(100, 187);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 13);
@@ -137,6 +144,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(100, 246);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 13);
@@ -146,6 +154,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(100, 305);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 13);
@@ -155,6 +164,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(100, 423);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
@@ -164,6 +174,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(574, 382);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
@@ -173,6 +184,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(574, 441);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 13);
@@ -199,6 +211,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(100, 364);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 13);
@@ -208,6 +221,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(100, 482);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 13);
@@ -235,6 +249,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(100, 541);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(93, 13);
@@ -244,16 +259,20 @@
             // LBTitulo
             // 
             this.LBTitulo.AutoSize = true;
-            this.LBTitulo.Location = new System.Drawing.Point(269, 55);
+            this.LBTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBTitulo.ForeColor = System.Drawing.Color.White;
+            this.LBTitulo.Location = new System.Drawing.Point(100, 61);
             this.LBTitulo.Name = "LBTitulo";
-            this.LBTitulo.Size = new System.Drawing.Size(63, 13);
+            this.LBTitulo.Size = new System.Drawing.Size(102, 20);
             this.LBTitulo.TabIndex = 22;
             this.LBTitulo.Text = "REGISTRO";
             // 
             // BTNInsertar
             // 
             this.BTNInsertar.AllowDrop = true;
-            this.BTNInsertar.BackColor = System.Drawing.Color.LimeGreen;
+            this.BTNInsertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(145)))), ((int)(((byte)(27)))));
+            this.BTNInsertar.FlatAppearance.BorderSize = 0;
+            this.BTNInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNInsertar.ForeColor = System.Drawing.Color.White;
             this.BTNInsertar.Location = new System.Drawing.Point(577, 491);
             this.BTNInsertar.Name = "BTNInsertar";
@@ -283,27 +302,36 @@
             // 
             // BTNAbrir1
             // 
+            this.BTNAbrir1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(145)))), ((int)(((byte)(27)))));
+            this.BTNAbrir1.FlatAppearance.BorderSize = 0;
+            this.BTNAbrir1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNAbrir1.ForeColor = System.Drawing.Color.White;
             this.BTNAbrir1.Location = new System.Drawing.Point(577, 303);
             this.BTNAbrir1.Name = "BTNAbrir1";
             this.BTNAbrir1.Size = new System.Drawing.Size(290, 41);
             this.BTNAbrir1.TabIndex = 28;
             this.BTNAbrir1.Text = "ABRIR";
-            this.BTNAbrir1.UseVisualStyleBackColor = true;
+            this.BTNAbrir1.UseVisualStyleBackColor = false;
             this.BTNAbrir1.Click += new System.EventHandler(this.BTNAbrir1_Click);
             // 
             // BTNAbrir2
             // 
+            this.BTNAbrir2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(145)))), ((int)(((byte)(27)))));
+            this.BTNAbrir2.FlatAppearance.BorderSize = 0;
+            this.BTNAbrir2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNAbrir2.ForeColor = System.Drawing.Color.White;
             this.BTNAbrir2.Location = new System.Drawing.Point(886, 303);
             this.BTNAbrir2.Name = "BTNAbrir2";
             this.BTNAbrir2.Size = new System.Drawing.Size(290, 41);
             this.BTNAbrir2.TabIndex = 30;
             this.BTNAbrir2.Text = "ABRIR";
-            this.BTNAbrir2.UseVisualStyleBackColor = true;
+            this.BTNAbrir2.UseVisualStyleBackColor = false;
             this.BTNAbrir2.Click += new System.EventHandler(this.BTNAbrir2_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(574, 102);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(94, 13);
@@ -327,17 +355,83 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(883, 102);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(91, 13);
             this.label13.TabIndex = 32;
             this.label13.Text = "FOTO PORTADA";
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Red;
+            this.btnCerrar.BackgroundColor = System.Drawing.Color.Red;
+            this.btnCerrar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCerrar.BorderRadius = 13;
+            this.btnCerrar.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(1056, 52);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(120, 40);
+            this.btnCerrar.TabIndex = 33;
+            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.TextColor = System.Drawing.Color.White;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(43)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.iconCerrar);
+            this.panel1.Controls.Add(this.iconMinimizar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1265, 33);
+            this.panel1.TabIndex = 34;
+            // 
+            // iconCerrar
+            // 
+            this.iconCerrar.FlatAppearance.BorderSize = 0;
+            this.iconCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconCerrar.ForeColor = System.Drawing.Color.White;
+            this.iconCerrar.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleDown;
+            this.iconCerrar.IconColor = System.Drawing.Color.Crimson;
+            this.iconCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCerrar.IconSize = 28;
+            this.iconCerrar.Location = new System.Drawing.Point(1225, 6);
+            this.iconCerrar.Name = "iconCerrar";
+            this.iconCerrar.Size = new System.Drawing.Size(28, 23);
+            this.iconCerrar.TabIndex = 9;
+            this.iconCerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconCerrar.UseVisualStyleBackColor = true;
+            // 
+            // iconMinimizar
+            // 
+            this.iconMinimizar.FlatAppearance.BorderSize = 0;
+            this.iconMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconMinimizar.ForeColor = System.Drawing.Color.White;
+            this.iconMinimizar.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+            this.iconMinimizar.IconColor = System.Drawing.Color.White;
+            this.iconMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMinimizar.IconSize = 25;
+            this.iconMinimizar.Location = new System.Drawing.Point(1197, 6);
+            this.iconMinimizar.Name = "iconMinimizar";
+            this.iconMinimizar.Size = new System.Drawing.Size(28, 23);
+            this.iconMinimizar.TabIndex = 8;
+            this.iconMinimizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconMinimizar.UseVisualStyleBackColor = true;
+            // 
             // REGISTRO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(80)))), ((int)(((byte)(115)))));
             this.ClientSize = new System.Drawing.Size(1265, 622);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.BTNAbrir2);
@@ -366,6 +460,7 @@
             this.Controls.Add(this.TBCorreo);
             this.Controls.Add(this.TBApellidoMaterno);
             this.Controls.Add(this.TBNombres);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "REGISTRO";
             this.Text = "REGISTRO";
             this.Load += new System.EventHandler(this.REGISTRO_Load);
@@ -373,6 +468,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redSocialUnivalleDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tUsuarioBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,5 +507,9 @@
         private System.Windows.Forms.BindingSource tUsuarioBindingSource;
         private RedSocialUnivalleDataSet1TableAdapters.TUsuarioTableAdapter tUsuarioTableAdapter;
         private System.Windows.Forms.Label label13;
+        private RJCodeAdvance.RJControls.RJButton btnCerrar;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton iconCerrar;
+        private FontAwesome.Sharp.IconButton iconMinimizar;
     }
 }

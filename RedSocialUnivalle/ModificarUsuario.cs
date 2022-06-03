@@ -163,6 +163,11 @@ namespace RedSocialUnivalle
 
 
         {
+            
+        }
+
+        private void ModificarUsuario_Load(object sender, EventArgs e)
+        {
             DataTable bt = new DataTable();
             string tconeccion = "Data Source=-VITANOVA-;Initial Catalog=RedSocialUnivalle;Integrated Security=True";
             SqlConnection dataConection = new SqlConnection(tconeccion);
@@ -183,17 +188,20 @@ namespace RedSocialUnivalle
                 DTFechaNacimiento.Text = registro["Fecha_Nacimiento"].ToString();
                 TBContraseña.Text = registro["Contraseña"].ToString();
 
-                
+                Byte[] mybyte = new byte[0];
+                mybyte = (Byte[])(registro["ImagenPerfil"]);
+                MemoryStream ms = new MemoryStream(mybyte);
+                PB1.Image = Image.FromStream(ms);
+
+                Byte[] mybyte1 = new byte[0];
+                mybyte1 = (Byte[])(registro["ImagenPortada"]);
+                MemoryStream ms1 = new MemoryStream(mybyte1);
+                PB2.Image = Image.FromStream(ms1);
 
                 TBUsuario.Text = registro["UsuarioSistema"].ToString();
 
-                dataConection.Close(); 
+                dataConection.Close();
             }
-        }
-
-        private void ModificarUsuario_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void BTNAbrir1_Click(object sender, EventArgs e)
@@ -224,6 +232,17 @@ namespace RedSocialUnivalle
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            EliminarUsuario iii = new EliminarUsuario();
+            iii.Show();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

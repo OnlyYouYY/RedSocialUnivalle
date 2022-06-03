@@ -76,5 +76,17 @@ namespace RedSocialUnivalle
             this.Close();
             yyy.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ListaChat www = new ListaChat();
+            this.Close();
+            www.Show();
+        }
+
+        private void BTNModificarPublicacion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

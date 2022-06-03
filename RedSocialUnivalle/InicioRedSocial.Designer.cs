@@ -45,6 +45,7 @@
             this.LBApellido = new System.Windows.Forms.Label();
             this.LBSesion = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -69,6 +70,7 @@
             this.BTNModificarPublicacion.TabIndex = 1;
             this.BTNModificarPublicacion.Text = "MODIFICAR PUBLICACION";
             this.BTNModificarPublicacion.UseVisualStyleBackColor = true;
+            this.BTNModificarPublicacion.Click += new System.EventHandler(this.BTNModificarPublicacion_Click);
             // 
             // BTNEliminarPublicacion
             // 
@@ -223,11 +225,22 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "SESION INICIADA";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(882, 148);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // InicioRedSocial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(986, 750);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -262,5 +275,6 @@
         private System.Windows.Forms.Label LBApellido;
         private System.Windows.Forms.Label LBSesion;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button2;
     }
 }

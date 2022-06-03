@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace RedSocialUnivalle
 {
-    internal static class Program
+    class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
@@ -17,6 +17,7 @@ namespace RedSocialUnivalle
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+ 
         }
     }
 }

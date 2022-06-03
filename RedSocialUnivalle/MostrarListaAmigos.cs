@@ -8,44 +8,62 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace RedSocialUnivalle
 {
     public partial class MostrarListaAmigos : Form
     {
+        SqlConnection cn = new SqlConnection("Data Source=-VITANOVA-;Initial Catalog=RedSocialUnivalle;Integrated Security=True");
         public MostrarListaAmigos()
         {
             InitializeComponent();
-            TBIdUsuario.Text = Form1.IdUsuario;
+            lbIdMiUsuario1.Text = Form1.IdUsuario;
+            
         }
 
         private void MostrarListaAmigos_Load(object sender, EventArgs e)
         {
-            DataTable bt = new DataTable();
-            string tconeccion = "Data Source=-VITANOVA-;Initial Catalog=RedSocialUnivalle;Integrated Security=True";
-            SqlConnection dataConection = new SqlConnection(tconeccion);
-            SqlDataAdapter da = new SqlDataAdapter("SPMostrarListaAmigos", dataConection);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            SqlCommand cm = new SqlCommand("SELECT DISTINCT a.IdAmigo, a.IdUsuario, a.IdUsuarioSolicitud, a.EstadoAmigo, u.UsuarioSistema FROM TAmigo as a, TUsuario as u WHERE (a.IdUsuario = '" + lbIdMiUsuario1.Text + "' and a.IdUsuarioSolicitud = a.IdUsuario) or (a.IdUsuario = a.IdUsuario and a.IdUsuarioSolicitud = '" + lbIdMiUsuario1.Text + "') and a.EstadoAmigo = 'True' and u.IdUsuario = a.IdUsuario", cn);
+            //abrimos la coneccion
+            cn.Open();
+            SqlDataReader dr = cm.ExecuteReader();
+            if (dr.HasRows)
+            {
+                //if datos son leido agregamos al control
+                while (dr.Read())
+                {
+                    //agregamos el origen de datos al control
+                    this.lbListaAmigos.Items.Add(dr.GetString(4));
+                }
+            }
+            //cerrams la coneccion
+            cn.Close();
+        }
 
-            da.SelectCommand.Parameters.Add("@IdUsuario", SqlDbType.VarChar, 50);
+        private void BTNActualizarLista_Click(object sender, EventArgs e)
+        {
 
-            da.SelectCommand.Parameters["@IdUsuario"].Value = TBIdUsuario.Text;
+        }
 
-            da.Fill(bt);
-            DGListaAmigos.DataSource = bt;
+        private void lbListaAmigos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlCommand cm = new SqlCommand("SELECT * FROM TUsuario where UsuarioSistema='" + lbListaAmigos.Text + "'", cn);
+            cn.Open();
+            SqlDataReader dr = cm.ExecuteReader();
+            if (dr.Read() == true)
+            {
+               
+                tbNombreUsuario.Text = dr["UsuarioSistema"].ToString();
+                lbNombres.Text = dr["Nombres"].ToString();
+                lbApellidoUsuario.Text = dr["Apellido_Paterno"].ToString();
 
-            DataTable bt1 = new DataTable();
-            string tconeccion1 = "Data Source=-VITANOVA-;Initial Catalog=RedSocialUnivalle;Integrated Security=True";
-            SqlConnection dataConection1 = new SqlConnection(tconeccion1);
-            SqlDataAdapter da1 = new SqlDataAdapter("SPMostrarListaAmigos2", dataConection1);
-            da1.SelectCommand.CommandType = CommandType.StoredProcedure;
-
-            da1.SelectCommand.Parameters.Add("@IdUsuario", SqlDbType.VarChar, 50);
-
-            da1.SelectCommand.Parameters["@IdUsuario"].Value = TBIdUsuario.Text;
-
-            da1.Fill(bt1);
-            DGListaAmigos2.DataSource = bt1;
+                Byte[] mybyte = new byte[0];
+                mybyte = (Byte[])(dr["ImagenPerfil"]);
+                MemoryStream ms = new MemoryStream(mybyte);
+                pbPerfilSelect.Image = Image.FromStream(ms);
+            }
+            cn.Close();
         }
     }
 }
