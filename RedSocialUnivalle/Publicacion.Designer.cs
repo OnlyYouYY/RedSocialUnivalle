@@ -30,9 +30,10 @@
         {
             this.LBUsuarioPublicacion = new System.Windows.Forms.Label();
             this.LBTituloPublicacion = new System.Windows.Forms.Label();
-            this.TBDescripcionPublicacion = new System.Windows.Forms.TextBox();
             this.GBReaccion = new System.Windows.Forms.GroupBox();
-            this.TBComentario = new System.Windows.Forms.TextBox();
+            this.RB3 = new System.Windows.Forms.RadioButton();
+            this.RB2 = new System.Windows.Forms.RadioButton();
+            this.RB1 = new System.Windows.Forms.RadioButton();
             this.GBComentario = new System.Windows.Forms.GroupBox();
             this.BTNGuardar = new System.Windows.Forms.Button();
             this.TBIdPublicacion2 = new System.Windows.Forms.TextBox();
@@ -42,10 +43,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.RB3 = new System.Windows.Forms.RadioButton();
-            this.RB2 = new System.Windows.Forms.RadioButton();
-            this.RB1 = new System.Windows.Forms.RadioButton();
             this.PBImagenPublicacion = new System.Windows.Forms.PictureBox();
+            this.TBComentario = new System.Windows.Forms.TextBox();
+            this.TBDescripcionPublicacion = new System.Windows.Forms.Label();
             this.GBReaccion.SuspendLayout();
             this.GBComentario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBImagenPublicacion)).BeginInit();
@@ -72,17 +72,6 @@
             this.LBTituloPublicacion.TabIndex = 2;
             this.LBTituloPublicacion.Text = "Label2";
             // 
-            // TBDescripcionPublicacion
-            // 
-            this.TBDescripcionPublicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(80)))), ((int)(((byte)(115)))));
-            this.TBDescripcionPublicacion.Enabled = false;
-            this.TBDescripcionPublicacion.ForeColor = System.Drawing.Color.White;
-            this.TBDescripcionPublicacion.Location = new System.Drawing.Point(102, 117);
-            this.TBDescripcionPublicacion.Multiline = true;
-            this.TBDescripcionPublicacion.Name = "TBDescripcionPublicacion";
-            this.TBDescripcionPublicacion.Size = new System.Drawing.Size(423, 40);
-            this.TBDescripcionPublicacion.TabIndex = 3;
-            // 
             // GBReaccion
             // 
             this.GBReaccion.Controls.Add(this.RB3);
@@ -96,13 +85,39 @@
             this.GBReaccion.TabStop = false;
             this.GBReaccion.Text = "Reacciona";
             // 
-            // TBComentario
+            // RB3
             // 
-            this.TBComentario.Location = new System.Drawing.Point(24, 17);
-            this.TBComentario.Multiline = true;
-            this.TBComentario.Name = "TBComentario";
-            this.TBComentario.Size = new System.Drawing.Size(372, 55);
-            this.TBComentario.TabIndex = 6;
+            this.RB3.AutoCheck = false;
+            this.RB3.ForeColor = System.Drawing.Color.White;
+            this.RB3.Image = global::RedSocialUnivalle.Properties.Resources.MeEncanta;
+            this.RB3.Location = new System.Drawing.Point(286, 16);
+            this.RB3.Name = "RB3";
+            this.RB3.Size = new System.Drawing.Size(57, 50);
+            this.RB3.TabIndex = 2;
+            this.RB3.TabStop = true;
+            this.RB3.UseVisualStyleBackColor = true;
+            // 
+            // RB2
+            // 
+            this.RB2.AutoCheck = false;
+            this.RB2.Image = global::RedSocialUnivalle.Properties.Resources.NoMeGusta;
+            this.RB2.Location = new System.Drawing.Point(187, 20);
+            this.RB2.Name = "RB2";
+            this.RB2.Size = new System.Drawing.Size(55, 44);
+            this.RB2.TabIndex = 1;
+            this.RB2.TabStop = true;
+            this.RB2.UseVisualStyleBackColor = true;
+            // 
+            // RB1
+            // 
+            this.RB1.AutoCheck = false;
+            this.RB1.Image = global::RedSocialUnivalle.Properties.Resources.MeGusta;
+            this.RB1.Location = new System.Drawing.Point(87, 17);
+            this.RB1.Name = "RB1";
+            this.RB1.Size = new System.Drawing.Size(56, 48);
+            this.RB1.TabIndex = 0;
+            this.RB1.TabStop = true;
+            this.RB1.UseVisualStyleBackColor = true;
             // 
             // GBComentario
             // 
@@ -130,7 +145,7 @@
             // TBIdPublicacion2
             // 
             this.TBIdPublicacion2.Enabled = false;
-            this.TBIdPublicacion2.Location = new System.Drawing.Point(719, 12);
+            this.TBIdPublicacion2.Location = new System.Drawing.Point(524, 12);
             this.TBIdPublicacion2.Name = "TBIdPublicacion2";
             this.TBIdPublicacion2.Size = new System.Drawing.Size(10, 20);
             this.TBIdPublicacion2.TabIndex = 10;
@@ -139,7 +154,7 @@
             // TBIdUsuario
             // 
             this.TBIdUsuario.Enabled = false;
-            this.TBIdUsuario.Location = new System.Drawing.Point(719, 36);
+            this.TBIdUsuario.Location = new System.Drawing.Point(524, 36);
             this.TBIdUsuario.Name = "TBIdUsuario";
             this.TBIdUsuario.Size = new System.Drawing.Size(10, 20);
             this.TBIdUsuario.TabIndex = 11;
@@ -148,7 +163,7 @@
             // TBUsuario
             // 
             this.TBUsuario.Enabled = false;
-            this.TBUsuario.Location = new System.Drawing.Point(719, 62);
+            this.TBUsuario.Location = new System.Drawing.Point(524, 62);
             this.TBUsuario.Name = "TBUsuario";
             this.TBUsuario.Size = new System.Drawing.Size(10, 20);
             this.TBUsuario.TabIndex = 12;
@@ -195,36 +210,6 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Usuario:";
             // 
-            // RB3
-            // 
-            this.RB3.Image = global::RedSocialUnivalle.Properties.Resources.MeEncanta;
-            this.RB3.Location = new System.Drawing.Point(286, 16);
-            this.RB3.Name = "RB3";
-            this.RB3.Size = new System.Drawing.Size(57, 50);
-            this.RB3.TabIndex = 2;
-            this.RB3.TabStop = true;
-            this.RB3.UseVisualStyleBackColor = true;
-            // 
-            // RB2
-            // 
-            this.RB2.Image = global::RedSocialUnivalle.Properties.Resources.NoMeGusta;
-            this.RB2.Location = new System.Drawing.Point(187, 20);
-            this.RB2.Name = "RB2";
-            this.RB2.Size = new System.Drawing.Size(55, 44);
-            this.RB2.TabIndex = 1;
-            this.RB2.TabStop = true;
-            this.RB2.UseVisualStyleBackColor = true;
-            // 
-            // RB1
-            // 
-            this.RB1.Image = global::RedSocialUnivalle.Properties.Resources.MeGusta;
-            this.RB1.Location = new System.Drawing.Point(87, 17);
-            this.RB1.Name = "RB1";
-            this.RB1.Size = new System.Drawing.Size(56, 48);
-            this.RB1.TabIndex = 0;
-            this.RB1.TabStop = true;
-            this.RB1.UseVisualStyleBackColor = true;
-            // 
             // PBImagenPublicacion
             // 
             this.PBImagenPublicacion.Location = new System.Drawing.Point(102, 161);
@@ -234,12 +219,30 @@
             this.PBImagenPublicacion.TabIndex = 4;
             this.PBImagenPublicacion.TabStop = false;
             // 
+            // TBComentario
+            // 
+            this.TBComentario.Location = new System.Drawing.Point(24, 17);
+            this.TBComentario.Multiline = true;
+            this.TBComentario.Name = "TBComentario";
+            this.TBComentario.Size = new System.Drawing.Size(372, 55);
+            this.TBComentario.TabIndex = 6;
+            // 
+            // TBDescripcionPublicacion
+            // 
+            this.TBDescripcionPublicacion.ForeColor = System.Drawing.Color.White;
+            this.TBDescripcionPublicacion.Location = new System.Drawing.Point(102, 115);
+            this.TBDescripcionPublicacion.Name = "TBDescripcionPublicacion";
+            this.TBDescripcionPublicacion.Size = new System.Drawing.Size(423, 38);
+            this.TBDescripcionPublicacion.TabIndex = 17;
+            this.TBDescripcionPublicacion.Text = "label4";
+            // 
             // Publicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(80)))), ((int)(((byte)(115)))));
             this.ClientSize = new System.Drawing.Size(627, 637);
+            this.Controls.Add(this.TBDescripcionPublicacion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -251,7 +254,6 @@
             this.Controls.Add(this.GBComentario);
             this.Controls.Add(this.GBReaccion);
             this.Controls.Add(this.PBImagenPublicacion);
-            this.Controls.Add(this.TBDescripcionPublicacion);
             this.Controls.Add(this.LBTituloPublicacion);
             this.Controls.Add(this.LBUsuarioPublicacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -275,7 +277,6 @@
         private System.Windows.Forms.RadioButton RB3;
         private System.Windows.Forms.RadioButton RB2;
         private System.Windows.Forms.RadioButton RB1;
-        private System.Windows.Forms.TextBox TBComentario;
         private System.Windows.Forms.GroupBox GBComentario;
         private System.Windows.Forms.Button BTNGuardar;
         private System.Windows.Forms.TextBox TBIdUsuario;
@@ -285,6 +286,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox TBDescripcionPublicacion;
+        private System.Windows.Forms.TextBox TBComentario;
+        private System.Windows.Forms.Label TBDescripcionPublicacion;
     }
 }

@@ -77,6 +77,7 @@
             this.BTNLogin.Text = "LOGIN";
             this.BTNLogin.UseVisualStyleBackColor = false;
             this.BTNLogin.Click += new System.EventHandler(this.BTNLogin_Click);
+            this.BTNLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BTNLogin_KeyPress);
             // 
             // BTNRegistro
             // 

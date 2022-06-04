@@ -171,5 +171,10 @@ namespace RedSocialUnivalle
         {
 
         }
+
+        private void BTNLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

@@ -30,10 +30,7 @@
         {
             this.panelButtonActions = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.iconMiUsuario = new FontAwesome.Sharp.IconButton();
-            this.iconChat = new FontAwesome.Sharp.IconButton();
-            this.iconAmigos = new FontAwesome.Sharp.IconButton();
-            this.iconPublicaciones = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarSesion = new RJCodeAdvance.RJControls.RJButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbIdUsuarioSistema = new System.Windows.Forms.TextBox();
             this.lbApellidoUsuario = new System.Windows.Forms.Label();
@@ -44,10 +41,14 @@
             this.lbUsuarioSistema = new System.Windows.Forms.Label();
             this.panelRecargable = new System.Windows.Forms.Panel();
             this.pbPortada = new System.Windows.Forms.PictureBox();
-            this.btnCerrarSesion = new RJCodeAdvance.RJControls.RJButton();
+            this.iconMiUsuario = new FontAwesome.Sharp.IconButton();
+            this.iconChat = new FontAwesome.Sharp.IconButton();
+            this.iconAmigos = new FontAwesome.Sharp.IconButton();
+            this.iconPublicaciones = new FontAwesome.Sharp.IconButton();
             this.pbPerfilInicio = new RedSocialUnivalle.ClasePictureBox();
-            this.iconMinimizar = new FontAwesome.Sharp.IconButton();
             this.iconCerrar = new FontAwesome.Sharp.IconButton();
+            this.iconMinimizar = new FontAwesome.Sharp.IconButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelButtonActions.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,6 +71,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(70)))), ((int)(((byte)(140)))));
+            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.btnCerrarSesion);
             this.panelMenu.Controls.Add(this.iconMiUsuario);
             this.panelMenu.Controls.Add(this.iconChat);
@@ -82,73 +84,24 @@
             this.panelMenu.Size = new System.Drawing.Size(216, 637);
             this.panelMenu.TabIndex = 1;
             // 
-            // iconMiUsuario
+            // btnCerrarSesion
             // 
-            this.iconMiUsuario.FlatAppearance.BorderSize = 0;
-            this.iconMiUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconMiUsuario.ForeColor = System.Drawing.Color.White;
-            this.iconMiUsuario.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.iconMiUsuario.IconColor = System.Drawing.Color.White;
-            this.iconMiUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMiUsuario.Location = new System.Drawing.Point(58, 463);
-            this.iconMiUsuario.Name = "iconMiUsuario";
-            this.iconMiUsuario.Size = new System.Drawing.Size(96, 64);
-            this.iconMiUsuario.TabIndex = 3;
-            this.iconMiUsuario.Text = "Mi Usuario";
-            this.iconMiUsuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconMiUsuario.UseVisualStyleBackColor = true;
-            this.iconMiUsuario.Click += new System.EventHandler(this.iconButton3_Click);
-            // 
-            // iconChat
-            // 
-            this.iconChat.FlatAppearance.BorderSize = 0;
-            this.iconChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconChat.ForeColor = System.Drawing.Color.White;
-            this.iconChat.IconChar = FontAwesome.Sharp.IconChar.Microblog;
-            this.iconChat.IconColor = System.Drawing.Color.White;
-            this.iconChat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconChat.Location = new System.Drawing.Point(58, 393);
-            this.iconChat.Name = "iconChat";
-            this.iconChat.Size = new System.Drawing.Size(96, 64);
-            this.iconChat.TabIndex = 4;
-            this.iconChat.Text = "Chat";
-            this.iconChat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconChat.UseVisualStyleBackColor = true;
-            this.iconChat.Click += new System.EventHandler(this.iconButton4_Click);
-            // 
-            // iconAmigos
-            // 
-            this.iconAmigos.FlatAppearance.BorderSize = 0;
-            this.iconAmigos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconAmigos.ForeColor = System.Drawing.Color.White;
-            this.iconAmigos.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
-            this.iconAmigos.IconColor = System.Drawing.Color.White;
-            this.iconAmigos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconAmigos.Location = new System.Drawing.Point(58, 323);
-            this.iconAmigos.Name = "iconAmigos";
-            this.iconAmigos.Size = new System.Drawing.Size(96, 64);
-            this.iconAmigos.TabIndex = 2;
-            this.iconAmigos.Text = "Amigos";
-            this.iconAmigos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconAmigos.UseVisualStyleBackColor = true;
-            this.iconAmigos.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
-            // iconPublicaciones
-            // 
-            this.iconPublicaciones.FlatAppearance.BorderSize = 0;
-            this.iconPublicaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconPublicaciones.ForeColor = System.Drawing.Color.White;
-            this.iconPublicaciones.IconChar = FontAwesome.Sharp.IconChar.Images;
-            this.iconPublicaciones.IconColor = System.Drawing.Color.White;
-            this.iconPublicaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPublicaciones.Location = new System.Drawing.Point(58, 253);
-            this.iconPublicaciones.Name = "iconPublicaciones";
-            this.iconPublicaciones.Size = new System.Drawing.Size(96, 64);
-            this.iconPublicaciones.TabIndex = 1;
-            this.iconPublicaciones.Text = "Publicaciones";
-            this.iconPublicaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconPublicaciones.UseVisualStyleBackColor = true;
-            this.iconPublicaciones.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Crimson;
+            this.btnCerrarSesion.BackgroundColor = System.Drawing.Color.Crimson;
+            this.btnCerrarSesion.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCerrarSesion.BorderRadius = 13;
+            this.btnCerrarSesion.BorderSize = 0;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(36, 548);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 59);
+            this.btnCerrarSesion.TabIndex = 5;
+            this.btnCerrarSesion.Text = "CERRAR SESION";
+            this.btnCerrarSesion.TextColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // panel1
             // 
@@ -257,24 +210,73 @@
             this.pbPortada.TabIndex = 0;
             this.pbPortada.TabStop = false;
             // 
-            // btnCerrarSesion
+            // iconMiUsuario
             // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.Crimson;
-            this.btnCerrarSesion.BackgroundColor = System.Drawing.Color.Crimson;
-            this.btnCerrarSesion.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCerrarSesion.BorderRadius = 13;
-            this.btnCerrarSesion.BorderSize = 0;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(36, 548);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 59);
-            this.btnCerrarSesion.TabIndex = 5;
-            this.btnCerrarSesion.Text = "CERRAR SESION";
-            this.btnCerrarSesion.TextColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            this.iconMiUsuario.FlatAppearance.BorderSize = 0;
+            this.iconMiUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconMiUsuario.ForeColor = System.Drawing.Color.White;
+            this.iconMiUsuario.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.iconMiUsuario.IconColor = System.Drawing.Color.White;
+            this.iconMiUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMiUsuario.Location = new System.Drawing.Point(58, 463);
+            this.iconMiUsuario.Name = "iconMiUsuario";
+            this.iconMiUsuario.Size = new System.Drawing.Size(96, 64);
+            this.iconMiUsuario.TabIndex = 3;
+            this.iconMiUsuario.Text = "Mi Usuario";
+            this.iconMiUsuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconMiUsuario.UseVisualStyleBackColor = true;
+            this.iconMiUsuario.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // iconChat
+            // 
+            this.iconChat.FlatAppearance.BorderSize = 0;
+            this.iconChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconChat.ForeColor = System.Drawing.Color.White;
+            this.iconChat.IconChar = FontAwesome.Sharp.IconChar.Microblog;
+            this.iconChat.IconColor = System.Drawing.Color.White;
+            this.iconChat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconChat.Location = new System.Drawing.Point(58, 393);
+            this.iconChat.Name = "iconChat";
+            this.iconChat.Size = new System.Drawing.Size(96, 64);
+            this.iconChat.TabIndex = 4;
+            this.iconChat.Text = "Chat";
+            this.iconChat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconChat.UseVisualStyleBackColor = true;
+            this.iconChat.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
+            // iconAmigos
+            // 
+            this.iconAmigos.FlatAppearance.BorderSize = 0;
+            this.iconAmigos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconAmigos.ForeColor = System.Drawing.Color.White;
+            this.iconAmigos.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
+            this.iconAmigos.IconColor = System.Drawing.Color.White;
+            this.iconAmigos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconAmigos.Location = new System.Drawing.Point(58, 323);
+            this.iconAmigos.Name = "iconAmigos";
+            this.iconAmigos.Size = new System.Drawing.Size(96, 64);
+            this.iconAmigos.TabIndex = 2;
+            this.iconAmigos.Text = "Amigos";
+            this.iconAmigos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconAmigos.UseVisualStyleBackColor = true;
+            this.iconAmigos.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // iconPublicaciones
+            // 
+            this.iconPublicaciones.FlatAppearance.BorderSize = 0;
+            this.iconPublicaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconPublicaciones.ForeColor = System.Drawing.Color.White;
+            this.iconPublicaciones.IconChar = FontAwesome.Sharp.IconChar.Images;
+            this.iconPublicaciones.IconColor = System.Drawing.Color.White;
+            this.iconPublicaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPublicaciones.Location = new System.Drawing.Point(58, 253);
+            this.iconPublicaciones.Name = "iconPublicaciones";
+            this.iconPublicaciones.Size = new System.Drawing.Size(96, 64);
+            this.iconPublicaciones.TabIndex = 1;
+            this.iconPublicaciones.Text = "Publicaciones";
+            this.iconPublicaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconPublicaciones.UseVisualStyleBackColor = true;
+            this.iconPublicaciones.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // pbPerfilInicio
             // 
@@ -290,6 +292,22 @@
             this.pbPerfilInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPerfilInicio.TabIndex = 0;
             this.pbPerfilInicio.TabStop = false;
+            // 
+            // iconCerrar
+            // 
+            this.iconCerrar.FlatAppearance.BorderSize = 0;
+            this.iconCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconCerrar.ForeColor = System.Drawing.Color.White;
+            this.iconCerrar.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleDown;
+            this.iconCerrar.IconColor = System.Drawing.Color.Crimson;
+            this.iconCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCerrar.IconSize = 28;
+            this.iconCerrar.Location = new System.Drawing.Point(1143, 7);
+            this.iconCerrar.Name = "iconCerrar";
+            this.iconCerrar.Size = new System.Drawing.Size(28, 23);
+            this.iconCerrar.TabIndex = 7;
+            this.iconCerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconCerrar.UseVisualStyleBackColor = true;
             // 
             // iconMinimizar
             // 
@@ -307,21 +325,15 @@
             this.iconMinimizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconMinimizar.UseVisualStyleBackColor = true;
             // 
-            // iconCerrar
+            // button1
             // 
-            this.iconCerrar.FlatAppearance.BorderSize = 0;
-            this.iconCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconCerrar.ForeColor = System.Drawing.Color.White;
-            this.iconCerrar.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleDown;
-            this.iconCerrar.IconColor = System.Drawing.Color.Crimson;
-            this.iconCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCerrar.IconSize = 28;
-            this.iconCerrar.Location = new System.Drawing.Point(1143, 7);
-            this.iconCerrar.Name = "iconCerrar";
-            this.iconCerrar.Size = new System.Drawing.Size(28, 23);
-            this.iconCerrar.TabIndex = 7;
-            this.iconCerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconCerrar.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(135, 614);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "pruebas";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // InterfazGeneral
             // 
@@ -368,5 +380,6 @@
         private RJCodeAdvance.RJControls.RJButton btnCerrarSesion;
         private FontAwesome.Sharp.IconButton iconCerrar;
         private FontAwesome.Sharp.IconButton iconMinimizar;
+        private System.Windows.Forms.Button button1;
     }
 }

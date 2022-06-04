@@ -58,6 +58,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlertReaccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlertReaccion.Designer.cs">
+      <DependentUpon>AlertReaccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="AñadirAmigos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,18 @@
     </Compile>
     <Compile Include="claseTextBox.Designer.cs">
       <DependentUpon>claseTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComentariosFLP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComentariosFLP.Designer.cs">
+      <DependentUpon>ComentariosFLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComentariosInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComentariosInicio.Designer.cs">
+      <DependentUpon>ComentariosInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="DataMensajes.cs" />
     <Compile Include="EliminarUsuario.cs">
@@ -172,6 +190,12 @@
     <Compile Include="MostrarUsuarios.Designer.cs">
       <DependentUpon>MostrarUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="PaginaInicioPublicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaginaInicioPublicaciones.Designer.cs">
+      <DependentUpon>PaginaInicioPublicaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="PerfilDeUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,11 +215,23 @@
     <Compile Include="Prueba.Designer.cs">
       <DependentUpon>Prueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="pruebas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pruebas.Designer.cs">
+      <DependentUpon>pruebas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Publicacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Publicacion.Designer.cs">
       <DependentUpon>Publicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReaccionesInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReaccionesInicio.Designer.cs">
+      <DependentUpon>ReaccionesInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="ReaccionesPubli.cs">
       <SubType>Form</SubType>
@@ -214,6 +250,15 @@
     <Compile Include="REGISTRO.Designer.cs">
       <DependentUpon>REGISTRO.cs</DependentUpon>
     </Compile>
+    <Compile Include="TemplPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TemplPost.Designer.cs">
+      <DependentUpon>TemplPost.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AlertReaccion.resx">
+      <DependentUpon>AlertReaccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AñadirAmigos.resx">
       <DependentUpon>AñadirAmigos.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +273,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="claseTextBox.resx">
       <DependentUpon>claseTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComentariosFLP.resx">
+      <DependentUpon>ComentariosFLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComentariosInicio.resx">
+      <DependentUpon>ComentariosInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarUsuario.resx">
       <DependentUpon>EliminarUsuario.cs</DependentUpon>
@@ -268,6 +319,9 @@
     <EmbeddedResource Include="MostrarUsuarios.resx">
       <DependentUpon>MostrarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PaginaInicioPublicaciones.resx">
+      <DependentUpon>PaginaInicioPublicaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -276,14 +330,23 @@
     <EmbeddedResource Include="Prueba.resx">
       <DependentUpon>Prueba.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pruebas.resx">
+      <DependentUpon>pruebas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Publicacion.resx">
       <DependentUpon>Publicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReaccionesInicio.resx">
+      <DependentUpon>ReaccionesInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReaccionesPubli.resx">
       <DependentUpon>ReaccionesPubli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REGISTRO.resx">
       <DependentUpon>REGISTRO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplPost.resx">
+      <DependentUpon>TemplPost.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

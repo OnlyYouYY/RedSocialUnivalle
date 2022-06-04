@@ -43,6 +43,7 @@
             this.TBIdUsuario.Name = "TBIdUsuario";
             this.TBIdUsuario.Size = new System.Drawing.Size(63, 20);
             this.TBIdUsuario.TabIndex = 1;
+            this.TBIdUsuario.Visible = false;
             // 
             // label1
             // 
@@ -97,6 +98,7 @@
             this.tbIdSolicitudes.Name = "tbIdSolicitudes";
             this.tbIdSolicitudes.Size = new System.Drawing.Size(63, 20);
             this.tbIdSolicitudes.TabIndex = 8;
+            this.tbIdSolicitudes.Visible = false;
             // 
             // MostrarSolicitudes
             // 

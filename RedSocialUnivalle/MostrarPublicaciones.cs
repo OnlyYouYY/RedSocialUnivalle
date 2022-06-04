@@ -24,7 +24,7 @@ namespace RedSocialUnivalle
         private void MostrarPublicaciones_Load(object sender, EventArgs e)
         {
 
-            SqlCommand cm = new SqlCommand("SELECT IdPublicacion, TituloContent FROM TPublicacion", cn);
+            SqlCommand cm = new SqlCommand("SELECT u.IdUsuario,p.IdUsuario,p.IdPublicacion, p.TituloContent, p.Fecha_Publicacion, u.UsuarioSistema FROM TPublicacion as p, TUsuario as u WHERE p.IdUsuario = u.IdUsuario ORDER BY Fecha_Publicacion desc", cn);
             
             cn.Open();
             SqlDataReader dr = cm.ExecuteReader();
@@ -33,8 +33,7 @@ namespace RedSocialUnivalle
                 
                 while (dr.Read())
                 {
-                    
-                    this.listPublicaciones.Items.Add(dr.GetString(1));
+                    this.listPublicaciones.Items.Add(dr.GetDateTime(4)+" - "+dr.GetString(5)+" - "+ dr.GetString(3));
                 }
             }
             //cerrams la coneccion
@@ -121,7 +120,7 @@ namespace RedSocialUnivalle
 
         private void listPublicaciones_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlCommand cm = new SqlCommand("SELECT * FROM TPublicacion where TituloContent='" + listPublicaciones.Text + "'", cn);
+            SqlCommand cm = new SqlCommand("SELECT * FROM TPublicacion where TituloContent='" + listPublicaciones.Items[2] + "'", cn);
             cn.Open();
             SqlDataReader dr = cm.ExecuteReader();
             if (dr.Read() == true)
@@ -135,6 +134,11 @@ namespace RedSocialUnivalle
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panelPubliControllers_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

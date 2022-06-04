@@ -94,5 +94,11 @@ namespace RedSocialUnivalle
             Form1 inicio = new Form1();
             inicio.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pruebas iii = new pruebas();
+            iii.Show();
+        }
     }
 }

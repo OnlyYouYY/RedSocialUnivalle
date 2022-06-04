@@ -31,6 +31,7 @@
             this.listChatAmigos = new System.Windows.Forms.ListBox();
             this.btnChatear = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new RJCodeAdvance.RJControls.RJButton();
             this.tbNombreUsuario = new System.Windows.Forms.Label();
             this.tbIdAmigo = new System.Windows.Forms.Label();
             this.lbApellidoUsuario = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pbPerfilSelect = new RedSocialUnivalle.ClasePictureBox();
             this.lbIdMiUsuario = new System.Windows.Forms.Label();
-            this.btnCerrar = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfilSelect)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +83,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(573, 598);
             this.panel1.TabIndex = 5;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Red;
+            this.btnCerrar.BackgroundColor = System.Drawing.Color.Red;
+            this.btnCerrar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCerrar.BorderRadius = 13;
+            this.btnCerrar.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(51, 34);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(120, 40);
+            this.btnCerrar.TabIndex = 18;
+            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.TextColor = System.Drawing.Color.White;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // tbNombreUsuario
             // 
@@ -196,25 +215,7 @@
             this.lbIdMiUsuario.Size = new System.Drawing.Size(35, 13);
             this.lbIdMiUsuario.TabIndex = 14;
             this.lbIdMiUsuario.Text = "label5";
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Red;
-            this.btnCerrar.BackgroundColor = System.Drawing.Color.Red;
-            this.btnCerrar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCerrar.BorderRadius = 13;
-            this.btnCerrar.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(51, 34);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(120, 40);
-            this.btnCerrar.TabIndex = 18;
-            this.btnCerrar.Text = "CERRAR";
-            this.btnCerrar.TextColor = System.Drawing.Color.White;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.lbIdMiUsuario.Visible = false;
             // 
             // ListaChat
             // 

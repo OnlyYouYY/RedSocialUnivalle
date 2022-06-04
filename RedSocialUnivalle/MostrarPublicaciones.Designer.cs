@@ -78,6 +78,7 @@
             this.panelPubliControllers.Name = "panelPubliControllers";
             this.panelPubliControllers.Size = new System.Drawing.Size(343, 637);
             this.panelPubliControllers.TabIndex = 10;
+            this.panelPubliControllers.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPubliControllers_Paint);
             // 
             // btnCerrar
             // 
@@ -89,7 +90,7 @@
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(49, 562);
+            this.btnCerrar.Location = new System.Drawing.Point(25, 574);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(120, 40);
             this.btnCerrar.TabIndex = 18;
@@ -102,7 +103,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(46, 243);
+            this.label2.Location = new System.Drawing.Point(22, 243);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 13);
             this.label2.TabIndex = 17;
@@ -110,11 +111,10 @@
             // 
             // tbIdPublicacion
             // 
-            this.tbIdPublicacion.Location = new System.Drawing.Point(277, 573);
+            this.tbIdPublicacion.Location = new System.Drawing.Point(297, 574);
             this.tbIdPublicacion.Name = "tbIdPublicacion";
             this.tbIdPublicacion.Size = new System.Drawing.Size(18, 20);
             this.tbIdPublicacion.TabIndex = 16;
-            this.tbIdPublicacion.Visible = false;
             // 
             // iconVerPublic
             // 
@@ -125,9 +125,9 @@
             this.iconVerPublic.IconChar = FontAwesome.Sharp.IconChar.Images;
             this.iconVerPublic.IconColor = System.Drawing.Color.White;
             this.iconVerPublic.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconVerPublic.Location = new System.Drawing.Point(175, 161);
+            this.iconVerPublic.Location = new System.Drawing.Point(178, 161);
             this.iconVerPublic.Name = "iconVerPublic";
-            this.iconVerPublic.Size = new System.Drawing.Size(120, 65);
+            this.iconVerPublic.Size = new System.Drawing.Size(137, 65);
             this.iconVerPublic.TabIndex = 15;
             this.iconVerPublic.Text = "Ver Publicacion";
             this.iconVerPublic.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -143,9 +143,9 @@
             this.iconEliminarPublic.IconChar = FontAwesome.Sharp.IconChar.Images;
             this.iconEliminarPublic.IconColor = System.Drawing.Color.White;
             this.iconEliminarPublic.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconEliminarPublic.Location = new System.Drawing.Point(49, 161);
+            this.iconEliminarPublic.Location = new System.Drawing.Point(25, 161);
             this.iconEliminarPublic.Name = "iconEliminarPublic";
-            this.iconEliminarPublic.Size = new System.Drawing.Size(120, 65);
+            this.iconEliminarPublic.Size = new System.Drawing.Size(137, 65);
             this.iconEliminarPublic.TabIndex = 14;
             this.iconEliminarPublic.Text = "Eliminar Publicacion";
             this.iconEliminarPublic.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -161,9 +161,9 @@
             this.iconModificarPublic.IconChar = FontAwesome.Sharp.IconChar.Images;
             this.iconModificarPublic.IconColor = System.Drawing.Color.White;
             this.iconModificarPublic.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconModificarPublic.Location = new System.Drawing.Point(175, 90);
+            this.iconModificarPublic.Location = new System.Drawing.Point(178, 90);
             this.iconModificarPublic.Name = "iconModificarPublic";
-            this.iconModificarPublic.Size = new System.Drawing.Size(120, 65);
+            this.iconModificarPublic.Size = new System.Drawing.Size(137, 65);
             this.iconModificarPublic.TabIndex = 13;
             this.iconModificarPublic.Text = "Mis Publicaciones";
             this.iconModificarPublic.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -179,9 +179,9 @@
             this.iconAñadirPublic.IconChar = FontAwesome.Sharp.IconChar.Images;
             this.iconAñadirPublic.IconColor = System.Drawing.Color.White;
             this.iconAñadirPublic.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconAñadirPublic.Location = new System.Drawing.Point(49, 90);
+            this.iconAñadirPublic.Location = new System.Drawing.Point(25, 90);
             this.iconAñadirPublic.Name = "iconAñadirPublic";
-            this.iconAñadirPublic.Size = new System.Drawing.Size(120, 65);
+            this.iconAñadirPublic.Size = new System.Drawing.Size(137, 65);
             this.iconAñadirPublic.TabIndex = 12;
             this.iconAñadirPublic.Text = "Añadir Publicacion";
             this.iconAñadirPublic.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -195,9 +195,9 @@
             this.listPublicaciones.Cursor = System.Windows.Forms.Cursors.Default;
             this.listPublicaciones.ForeColor = System.Drawing.Color.White;
             this.listPublicaciones.FormattingEnabled = true;
-            this.listPublicaciones.Location = new System.Drawing.Point(49, 268);
+            this.listPublicaciones.Location = new System.Drawing.Point(25, 270);
             this.listPublicaciones.Name = "listPublicaciones";
-            this.listPublicaciones.Size = new System.Drawing.Size(246, 288);
+            this.listPublicaciones.Size = new System.Drawing.Size(290, 288);
             this.listPublicaciones.TabIndex = 11;
             this.listPublicaciones.SelectedIndexChanged += new System.EventHandler(this.listPublicaciones_SelectedIndexChanged);
             // 
@@ -205,7 +205,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(46, 47);
+            this.label1.Location = new System.Drawing.Point(22, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 10;

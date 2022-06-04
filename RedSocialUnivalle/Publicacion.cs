@@ -29,6 +29,7 @@ namespace RedSocialUnivalle
             if (RB1.Checked)
             {
                 reaccion = "1";
+                
             }
             if (RB2.Checked)
             {

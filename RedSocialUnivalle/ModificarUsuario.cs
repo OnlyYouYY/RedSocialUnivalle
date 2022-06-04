@@ -123,12 +123,14 @@ namespace RedSocialUnivalle
                                                     da.SelectCommand.Parameters["@Contraseña"].Value = TBContraseña.Text;
                                                     da.SelectCommand.Parameters["@UsuarioSistema"].Value = TBUsuario.Text;
 
+
                                                     System.IO.MemoryStream ms = new System.IO.MemoryStream();
                                                     PB1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                                                    PB2.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                                                    System.IO.MemoryStream ms1 = new System.IO.MemoryStream();
+                                                    PB2.Image.Save(ms1, System.Drawing.Imaging.ImageFormat.Jpeg);
 
                                                     da.SelectCommand.Parameters["@ImgPerfil"].Value = ms.GetBuffer();
-                                                    da.SelectCommand.Parameters["@ImgPortada"].Value = ms.GetBuffer();
+                                                    da.SelectCommand.Parameters["@ImgPortada"].Value = ms1.GetBuffer();
 
                                                     MessageBox.Show("Usuario Actualizado");
 
